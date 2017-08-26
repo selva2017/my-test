@@ -1,0 +1,89 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Test Form</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group" >
+        <label for="name">Name</label>
+        <select type="number" [(ngModel)]="index" (ngModelChange)="selectList()" name="index">
+      <option *ngFor="let list of lists" [ngValue]="list.id">{{list.name}}</option>
+    </select>
+
+      </div>
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input type="text" id="id" name="id" value="{{model.id}}">
+      </div>
+      <div class="form-group">
+        <label for="phone">Id</label>
+        <input type="text" id="phone" name="phone" value="{{model.phone}}">
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+    </form>
+
+  </div>
+</div>
+
+<!-- <h1>Selecting Number</h1>
+    <select type="number" [(ngModel)]="listNum" (ngModelChange)="toNumber()">
+      <option *ngFor="let list of lists; let i=index" [ngValue]="list.num">{{list.name}}</option>
+    </select>
+    {{listNum}} -->
+
+<!-- <div class="container">
+  <div [hidden]="submitted">
+    <h1>Hero Form</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"
+               required
+               [(ngModel)]="model.name" name="name"
+               #name="ngModel">
+        <div [hidden]="name.valid || name.pristine"
+             class="alert alert-danger">
+          Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="alterEgo">Alter Ego</label>
+        <input type="text" class="form-control" id="alterEgo"
+               [(ngModel)]="model.alterEgo" name="alterEgo">
+      </div>
+
+      <div class="form-group">
+        <label for="power">Hero Power</label>
+        <select class="form-control" id="power"
+                required
+                [(ngModel)]="model.power" name="power"
+                #power="ngModel">
+          <option *ngFor="let pow of powers" [value]="pow">{{pow.power}}</option>
+        </select>
+        <div [hidden]="power.valid || power.pristine" class="alert alert-danger">
+          Power is required
+        </div>
+      </div>
+{{model.power}}{{modal.name}}{{modal.id}}
+      <button type="submit" class="btn btn-success" [disabled]="!heroForm.form.valid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
+    </form>
+  </div>
+
+  <div [hidden]="!submitted">
+    <h2>You submitted the following:</h2>
+    <div class="row">
+      <div class="col-xs-3">Name</div>
+      <div class="col-xs-9  pull-left">{{ model.name }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Alter Ego</div>
+      <div class="col-xs-9 pull-left">{{ model.alterEgo }}</div>
+    </div>
+    <div class="row">
+      <div class="col-xs-3">Power</div>
+      <div class="col-xs-9 pull-left">{{ model.power }}</div>
+    </div>
+    <br>
+    <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+  </div>
+</div> -->

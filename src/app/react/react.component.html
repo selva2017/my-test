@@ -1,0 +1,53 @@
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="product" [formGroup]="supplier">
+  <h1> Reactive </h1>
+  <label>
+    <span>Product ID</span>
+    <input
+      type="text"
+      formControlName="productId">
+  </label>
+  <label>
+      <span>Product Code</span>
+      <input
+      type="text"
+      formControlName="productCode">
+    </label>
+  <label>
+      <span>Product Name</span>
+      <input
+      type="text"
+      formControlName="productName">
+    </label>
+
+  <label>
+      <span>Product Quantity</span>
+      <input
+      type="text"
+      formControlName="productQuantity">
+    </label>
+  <label>
+      <span>Product Price</span>
+      <input
+      type="text"
+      formControlName="productPrice">
+    </label>
+   <!-- <label>
+      <span>Supplier ID</span>
+      <input
+      type="text"
+      formControlName="supplierId">
+    </label>
+  <label>
+      <span>Supplier Name</span>
+      <input
+      type="text"
+      formControlName="supplierName">
+    </label>
+  <label>
+      <span>Supplier Phone</span>
+      <input
+      type="text"
+      formControlName="supplierPhone">
+    </label>  -->
+  <button type="submit">Submit</button> 
+</form>

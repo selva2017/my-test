@@ -1,0 +1,62 @@
+<h1>Template</h1>
+<form novalidate (ngSubmit)="onSubmit()" #f="ngForm">
+  <label>
+    <span>Product ID</span>
+    <input
+      type="text"
+      name="productId"
+      [(ngModel)]="product.productId">
+  </label>
+  <label>
+      <span>Product Code</span>
+      <input
+      type="text"
+      name="productCode"
+        [(ngModel)]="product.productCode">
+    </label>
+  <label>
+      <span>Product Name</span>
+      <input
+      type="text"
+      name="productName"
+        [(ngModel)]="product.productName">
+    </label>
+
+  <label>
+      <span>Product Quantity</span>
+      <input
+      type="text"
+      name="productQuantity"
+        [(ngModel)]="product.productQuantity">
+    </label>
+  <label>
+      <span>Product Price</span>
+      <input
+      type="text"
+      name="productPrice"
+        [(ngModel)]="product.productPrice">
+    </label>
+  <label>
+      <span>Supplier ID</span>
+      <input
+      type="text"
+      name="supplierId"
+        [(ngModel)]="supplier.supplierId">
+    </label>
+  <label>
+      <span>Supplier Name</span>
+      <input
+      type="text"
+      name="supplierName"
+        [(ngModel)]="supplier.supplierName">
+    </label>
+  <label>
+      <span>Supplier Phone</span>
+      <input
+      type="text"
+      name="supplierPhone"
+        [(ngModel)]="supplier.supplierPhone">
+    </label>
+  <button type="submit">Submit</button> 
+  {{product | json}} {{supplier | json}} ---------------------------------- {{f.value| json}}
+</form>
